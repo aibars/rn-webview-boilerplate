@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <div style="line-height: 200px;
+    height: 200px;
+    text-align: center;">
+        <p style="text-align: center;">WebView HTML Content</p>
+        <button type="button" style="height: 70px; width: 250px;" onclick="postMessage()">Post message to React Native
+            app</button>
+    </div>
+    <script src="" async defer></script>
+</body>
+<script>
+    function postMessage() {
+        let message = { messageType: "save", content: 'Posting message to app' };
+        window.ReactNativeWebView.postMessage(JSON.stringify(message));
+    }
+</script>
+
+</html>
