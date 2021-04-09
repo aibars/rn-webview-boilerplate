@@ -15,6 +15,8 @@ export class WebViewWrapper extends React.PureComponent<{}, IWebViewWrapperState
     private webView: WebView;
 
     public onMessage = (event: WebViewMessageEvent) => {
+        // Here we can capture output messages from the HTML page and process them 
+        // such as doing a setState or handle the information.
         console.log(event.nativeEvent.data);
     }
 
